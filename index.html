@@ -8,19 +8,52 @@
 		<header class="main-header">
 			<div class="logo">
 				<a class="main-header-logo">
-					<img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»">
+					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
 				</a>
 			</div>
 			<nav class="main-navigation">
 				<ul class="site-navigation">
-					<li><a href="catalog.html">Каталог</a></li>
+					<li>
+						<a href="catalog.html">Каталог</a>
+						<ul class="site-navigation-sub">
+							<li>
+								<a class="novelty" href="#">Новинки</a>
+								<a href="#">Сливочное</a>
+								<a class="active" href="#">Щербеты</a>
+								<a href="#">Фруктовый лёд</a>
+								<a href="#">Мелорин</a>
+							</li>
+						</ul>
+					</li>
 					<li><a href="delivery-price.html">Доставка и оплата</a></li>
 					<li><a href="info.html">О Компании</a></li>
 				</ul>
 				<ul class="user-navigation">
-					<li class="search">Поиск</li>
-					<li class="login-link">Вход</li>
-					<li class="empty-bag">Корзина</li>
+					<li class="search">
+						<a class="search-field" href="#">Поиск</a>
+						<form class="search-input">
+							<input type="search" name="search" placeholder="Что ищем?">
+						</form>
+					</li>
+					<li class="login-link">
+						<a class="login-link" href="login.html">Вход</a>
+						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+							<p>
+								<label class="visually-hidden" for="user-login">Электронная почта</label>
+								<input class="login-icon-user" id="user-login" type="email" name="login" placeholder="Электронная почта">
+							</p>
+							<p>
+								<label class="visually-hidden" for="user-password">Пароль</label>
+								<input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+							</p>
+							<a class="restore" href="#">Забыли пароль?</a>
+							<a class="new-registration" href="#">Новая регистрация</a>
+							<button class="button" type="submit">Войти</button>
+						</form>
+					</li>
+					<li class="empty-bag">
+						<a class="empty-bag" href="#">Корзина</a>
+					</li>
 				</ul>
 				<div class="header-contacts">
 					<p class="header-contacts-text">C 10 до 20 ежедневно</p>
@@ -29,9 +62,23 @@
 			</nav>
 		</header>
 		<main class="container">
-			<h1 class="visually-hidden">Gllacy Shop</h1>
-			<section class="slider">
-				<!--Слайдер-->
+			<h1 class="visually-hidden">Магазин «Глейси»</h1>
+			<section class="main-slider">
+				<div class="main-slider slide-1">
+					<p>Крем-брюле и пломбир с малиновым джемом</p>
+					<img src="img/bg_main-green.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+					<a href="#">Дайте оба!</a>
+				</div>
+				<div class="main-slider slide-2">
+					<p>Шоколадный пломбир и лимонный сорбет</p>
+					<img src="img/bg_main-black.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
+					<a href="#">Дайте оба!</a>
+				</div>
+				<div class="main-sider slide-3">
+					<img src="img/bg_main-brown.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
+					<p>Пломбир с помадкой и клубничный щербет</p>
+					<a href="#">Дайте оба!</a>
+				</div>	
 			</section>
 			<section class="bonus">
 				<h2 class="visually-hidden">Специальные предложения</h2>
@@ -65,7 +112,7 @@
 						</h3>
 						<img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 						<p class="catalog-item-price">
-							310₽/<span>кг</span>
+							310<span class="visually-hidden">рублей</span>/<span>кг</span>
 						</p>
 					</li>
 					<li class="catalog-item">
@@ -76,7 +123,7 @@
 						</h3>
 						<img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 						<p class="catalog-item-price">
-							380₽/<span>кг</span>
+							380<span class="visually-hidden">рублей</span>/<span>кг</span>
 						</p>
 					</li>
 					<li class="catalog-item">
@@ -87,7 +134,7 @@
 						</h3>
 						<img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 						<p class="catalog-item-price">
-							355₽/<span>кг</span>
+							355<span class="visually-hidden">рублей</span>/<span>кг</span>
 						</p>
 					</li>
 					<li class="catalog-item">
@@ -98,7 +145,7 @@
 						</h3>
 						<img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 						<p class="catalog-item-price">
-							415₽/<span>кг</span>
+							415<span class="visually-hidden">рублей</span>/<span>кг</span>
 						</p>
 					</li>
 				</ul>
@@ -128,7 +175,11 @@
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не 
 					слать всякой ненужной ерунды. Честно =)
 				</p>
-				<!--Форма-->
+				<form class="subscription-form" action="https://echo.htmlacademy.ru"  method="post">
+					<label class="visually-hidden" for="user-subscription">Электронная почта</label>
+					<input class="subscription-icon-user" id="user-subscription" type="email" name="email" placeholder="Электронная почта">
+					<button class="subscription-form-button" type="submit">Отправить</button>
+				</form>	
 			</section>
 			<section class="main-contacts">
 				<div class="map">
@@ -145,9 +196,24 @@
 					<b>8 812 450-25-25</b><br>
 						(с 10 до 20 ежедневно)
 					</p>
-					<a class="feedback-form" href="#">
-						<!--Форма обратной связи-->
-					</a>
+					<a class="button" href="#">Форма обратной связи</a>
+					<h2>Мы обязательно вам ответим!</h2>
+					<form class="feedback-form" action="#" method="post">
+						<p>
+							<label class="visually-hidden" for="user-feedback-name">Как вас зовут?</label>
+							<input id="user-feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+						</p>
+						<p>
+							<label class="visually-hidden" for="user-feedback-email">Ваша почта для ответа?</label>
+							<input id="user-feeback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+						</p>
+						<p>
+						<label class="visually-hidden" for="user-feedback-field">Напишите что-нибудь</label>
+						<textarea name="comment" id="user-feedback-field">Напишите что-нибудь...</textarea>
+						</p>
+						<button class="feedback-form-button" type="submit">Отправить</button>
+					</form>
+					<button class="feedback-form-close" type="button">Закрыть</button>
 				</div>
 			</section>
 		</main>
