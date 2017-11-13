@@ -8,7 +8,7 @@
 		<header class="main-header">
 			<div class="logo">
 				<a class="main-header-logo" href="main.html">
-					<img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»">
+					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
 				</a>
 			</div>
 			<nav class="main-navigation">
@@ -46,6 +46,8 @@
 					<form class="order" action="#" method="post">
 						<ul class="order-form">
 							<li class="order-item">
+								<a class="order-item-close" href="#">Закрыть</a>
+								<img src="img/item-1-small.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
 								<p>
 									Пломбир с апельсиновым джемом
 								</p>
@@ -57,6 +59,8 @@
 								</p>
 							</li>
 							<li class="order-item">
+								<a class="order-item-close" href="#">Закрыть</a>
+								<img src="img/item-3-small.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
 								<p>
 									Клубничный пломбир с присыпкой из белого шоколада
 								</p>
@@ -82,9 +86,9 @@
 		</header>
 		<main class="container">
 			<ul class="breadcrumbs">
-				<li><a href="main.html">Главная</li>
-				<li><a href="catalog.html">Каталог</li>
-				<li class="breadcrumbs-current">Сливочное</li>
+				<li><a href="main.html">Главная</a></li>
+				<li><a href="catalog.html">Каталог</a></li>
+				<li><a class="breadcrumbs-current">Сливочное</a></li>
 			</ul>
 			<h1 class="page-title">
 				Сливочное мороженое
@@ -92,30 +96,45 @@
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтр товаров</h2>
 				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
-					<label for="filter-sorting">Сортировка:</label>
-					<select id="filter-sorting" name="sorting">
-						<option>по популярности</option>
-					</select>
-					<label for="filter-price">Цена 100 руб. - 500 руб.</label>
-					<!--range с двумя кружками-->
+					<fieldset>
+						<label for="filter-sorting">Сортировка:</label>
+						<select id="filter-sorting" name="sorting">
+							<option>по популярности</option>
+							<option>по жирности</option>
+							<option>по цене</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>Цена: 100 руб. - 500 руб.</legend>
+						<ul>
+							<li class="filter-price">	
+								<input class="visually-hidden filter-input filter-input-text" type="text" name="price-group" value="100" id="filter-minimum-price">
+								<label for="filter-minimum-price">от</label>
+							</li>
+							<li class="filter-price">
+								<input class="visually-hidden filter-input filter-input-text" type="text" name="price-group" value="500" id="filter-maximum-price">
+								<label for="filter-maximum-price">до</label>
+							</li>
+						</ul>
+					</fieldset>
 					<fieldset>
 						<legend>Жирность</legend>
 						<ul>
 							<li class="filter-option">
 								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-zero">
-								<label for="filter-zero">0%</label>
+								<label for="filter-zero">0 <span>процентов</span></label>
 							</li>
 							<li class="filter-option">
 								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-up-ten">
-								<label for="filter-up-ten">до 10%</label>
+								<label for="filter-up-ten">до 10 <span>процентов</span></label>
 							</li>
 							<li class="filter-option">
 								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-up-thirty">
-								<label for="filter-up-thirty">до 30%</label>
+								<label for="filter-up-thirty">до 30 <span>процентов</span></label>
 							</li>
 							<li class="filter-option">
 								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-above-thirty">
-								<label for="filter-above-thirty">выше 30%</label>
+								<label for="filter-above-thirty">выше 30 <span>процентов</span></label>
 							</li>
 						</ul>
 					</fieldset>
