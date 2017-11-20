@@ -179,6 +179,12 @@ a.site-navigation-sub_novelty-link {
 	text-decoration: underline;
 }
 
+.restore-registration-links a:hover,
+.restore-registration-links a:focus,
+.restore-registration-links a:active {
+	color: #e84d37;
+}
+
 .order {
 	width: 539px;
 	height: 242px;
