@@ -8,16 +8,16 @@
 	<link href="css/style.css" rel="stylesheet">
   </head>
 	<body>
-		<div class="container">
+		<div class="main-container">
 			<header class="main-header">
-				<nav class="main-navigation">
-					<div class="site-navigation-wrapper">
+				<div class="main-navigation-wrapper">
+					<nav class="main-navigation">
+						<div class="logo">
+							<a class="main-header-logo">
+								<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
+							</a>
+						</div>
 						<ul class="site-navigation">
-							<li class="logo">
-								<a class="main-header-logo">
-									<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
-								</a>
-							</li>
 							<li>
 								<a class="site-navigation-link" href="catalog.html">Каталог</a>
 								<ul class="site-navigation-sub">
@@ -31,7 +31,7 @@
 							<li><a class="site-navigation-link"  href="delivery-price.html">Доставка и оплата</a></li>
 							<li><a class="site-navigation-link"  href="info.html">О Компании</a></li>
 						</ul>
-					</div>
+					</nav>
 					<div class="user-navigation-wrapper">		
 						<ul class="user-navigation">
 							<li class="search">
@@ -60,16 +60,14 @@
 								</form>
 							</li>
 							<li class="empty-bag">
-								<a class="empty-bag-field" href="#">Пусто</a>
+							<a class="empty-bag-field" href="#">Пусто</a>
 							</li>
 						</ul>
 					</div>	
-				</nav>
-				<div class="header-contacts-wrapper">
-					<div class="header-contacts">
-						<span class="header-contacts-text">C 10 до 20 ежедневно</span>
-						<span class="header-contacts-tel">8 812 450-25-25</span>
-					</div>
+				</div>
+				<div class="header-contacts">
+					<p class="header-contacts-text">C 10 до 20 ежедневно</p>
+					<p class="header-contacts-tel">8 812 450-25-25</p>
 				</div>
 			</header>
 			<main>
@@ -78,18 +76,18 @@
 					<ul class="main-slider">
 						<li class="main-slider slide-green">
 							<p>Крем-брюле и пломбир с малиновым джемом</p>
-							<img src="img/bg_main-green.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
-							<a class="button button-main-slider" href="#">Дайте оба!</a>
+							<!--<img src="img/bg_main-green.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">-->
+							<a class="button button-main-slider" href="#">Давайте оба!</a>
 						</li>
 						<li class="main-slider slide-black">
 							<p>Шоколадный пломбир и лимонный сорбет</p>
 							<img src="img/bg_main-black.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
-							<a class="button button-main-slider" href="#">Дайте оба!</a>
+							<a class="button button-main-slider" href="#">Давайте оба!</a>
 						</li>
 						<li class="main-sider slide-brown">
 							<img src="img/bg_main-brown.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
 							<p>Пломбир с помадкой и клубничный щербет</p>
-							<a class="button button-main-slider" href="#">Дайте оба!</a>
+							<a class="button button-main-slider" href="#">Давайте оба!</a>
 						</li>
 					</ul>
 					<ul class="slides-switches">
@@ -217,65 +215,67 @@
 		<section class="main-contacts">
 			<div class="map">
 				<img src="img/map.jpg" width="1200" height="430" alt="Карта">
-			<!--Карта-->
-			</div>
-			<div class="location">
-				<p>Адрес главного офиса и офлайн-магазина:<br>
-					<b>ул. Большая Конюшенная,<br>
-						19/8, Санкт-Петербург
-					</b>
-				</p>
-				<p>Для заказов по телефону:<br>
-				<b>8 812 450-25-25</b><br>
-					(с 10 до 20 ежедневно)
-				</p>
-				<a class="button button-feedback-form" href="#">Форма обратной связи</a>
-			</div>
-			<div class="popup feedback-form">
-				<h2>Мы обязательно вам ответим!</h2>
-				<form class="feedback-form" action="#" method="post">
-					<p>
-						<label class="visually-hidden-feedback" for="user-feedback-name">Как вас зовут?</label>
-						<input id="user-feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+				<!--Карта-->
+				<div class="location">
+					<p>Адрес главного офиса и офлайн-магазина:<br>
+						<b>ул. Большая Конюшенная,<br>
+							19/8, Санкт-Петербург
+						</b>
 					</p>
-					<p>
-						<label class="visually-hidden-feedback" for="user-feedback-email">Ваша почта для ответа?</label>
-						<input id="user-feeback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+					<p>Для заказов по телефону:<br>
+					<b>8 812 450-25-25</b><br>
+						(с 10 до 20 ежедневно)
 					</p>
-					<p>
-						<label class="visually-hidden-feedback" for="user-feedback-field">Напишите что-нибудь</label>
-						<textarea name="comment" id="user-feedback-field">Напишите что-нибудь...</textarea>
-					</p>
-					<button class="button feedback-form-button" type="submit">Отправить</button>
-				</form>
-				<button class="feedback-form-close" type="button">Закрыть</button>
+					<a class="button button-feedback-form" href="#">Форма обратной связи</a>
+				</div>
 			</div>
 		</section>
 		<footer class="main-footer">
-			<div class="footer-social">
-				<ul class="footer-social-buttons">
-					<li><a class="social-button button-twitter" href="#">Твиттер</a></li>
-					<li><a class="social-button button-instagram" href="#">Инстаграм</a></li>
-					<li><a class="social-button button-fb" href="#">Фейсбук</a></li>
-					<li><a class="social-button button-vk" href="#">Вконтакте</a></li>
-				</ul>
+			<div class="footer-container">
+				<div class="footer-social">
+					<ul class="footer-social-buttons">
+						<li><a class="social-button button-twitter" href="#">Твиттер</a></li>
+						<li><a class="social-button button-instagram" href="#">Инстаграм</a></li>
+						<li><a class="social-button button-fb" href="#">Фейсбук</a></li>
+						<li><a class="social-button button-vk" href="#">Вконтакте</a></li>
+					</ul>
+				</div>
+				<div class="footer-info">
+					<ul class="footer-info-links">
+						<li><a href="#"><b>Для поставщиков</b></a></li>
+						<li><a href="#">О производстве</a></li>
+						<li><a href="#">Наши документы</a></li>
+						<li><a href="#">Экологические стандарты</a></li>
+					</ul>
+				</div>
+				<div class="footer-copyright">
+					<a href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
+					</a>
+					<p>
+					Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+					</p>
+				</div>
 			</div>
-			<div class="footer-info">
-				<ul class="footer-info-links">
-					<li><a href="#"><b>Для поставщиков</b></a></li>
-					<li><a href="#">О производстве</a></li>
-					<li><a href="#">Наши документы</a></li>
-					<li><a href="#">Экологические стандарты</a></li>
-				</ul>
-			</div>
-			<div class="footer-copyright">
-				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
-				</a>
+		</footer>
+		<div class="popup feedback-form">
+			<h2>Мы обязательно вам ответим!</h2>
+			<form class="feedback-form" action="#" method="post">
 				<p>
-				Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+					<label class="visually-hidden-feedback" for="user-feedback-name">Как вас зовут?</label>
+					<input id="user-feedback-name" type="text" name="name" placeholder="Как вас зовут?">
 				</p>
-			</div>
-		</footer>			
+				<p>
+					<label class="visually-hidden-feedback" for="user-feedback-email">Ваша почта для ответа?</label>
+					<input id="user-feeback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+				</p>
+				<p>
+					<label class="visually-hidden-feedback" for="user-feedback-field">Напишите что-нибудь</label>
+					<textarea name="comment" id="user-feedback-field">Напишите что-нибудь...</textarea>
+				</p>
+				<button class="button feedback-form-button" type="submit">Отправить</button>
+			</form>
+			<button class="feedback-form-close" type="button">Закрыть</button>
+		</div>
 	</body>
 </html>

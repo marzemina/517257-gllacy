@@ -8,21 +8,21 @@
 	<link href="css/style.css" rel="stylesheet">
   </head>
 	<body class="inner-page">
-		<div class="container">
+		<div class="main-container">
 			<header class="main-header">
-				<nav class="main-navigation">
-					<div class="site-navigation-wrapper">
-						<ul class="site-navigation">
-							<li class="logo">
-								<a class="main-header-logo" href="main.html">
+				<div class="main-navigation-wrapper">
+					<nav class="main-navigation">
+						<div class="logo">
+							<a class="main-header-logo">
 								<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
-								</a>
-							</li>
+							</a>
+						</div>
+						<ul class="site-navigation">
 							<li><a class="site-navigation-link-current" href="catalog.html">Каталог</a></li>
 							<li><a href="delivery-price.html">Доставка и оплата</a></li>
 							<li><a href="info.html">О Компании</a></li>
 						</ul>
-					</div>
+					</nav>
 					<div class="user-navigation-wrapper">
 						<ul class="user-navigation">
 							<li class="search">
@@ -89,18 +89,16 @@
 							</form>
 						</ul>
 					</div>
-				</nav>
-				<div class="header-contacts-wrapper">
-					<div class="header-contacts">
-						<span class="header-contacts-text">C 10 до 20 ежедневно</span>
-						<span class="header-contacts-tel">8 812 450-25-25</span>
-					</div>
-					<ul class="breadcrumbs">
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="catalog.html">Каталог</a></li>
-						<li><a class="breadcrumbs-current">Сливочное</a></li>
-					</ul>
 				</div>
+				<div class="header-contacts">
+					<p class="header-contacts-text">C 10 до 20 ежедневно</p>
+					<p class="header-contacts-tel">8 812 450-25-25</p>
+				</div>
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="catalog.html">Каталог</a></li>
+					<li><a class="breadcrumbs-current">Сливочное</a></li>
+				</ul>
 			</header>
 			<main>
 				<h1 class="page-title">
@@ -330,29 +328,31 @@
 			</main>
 		</div>
 		<footer class="main-footer">
-			<div class="footer-social">
-				<ul class="footer-social-buttons">
-					<li><a class="social-button button-twitter" href="#">Твиттер</a></li>
-					<li><a class="social-button button-instagram" href="#">Инстаграм</a></li>
-					<li><a class="social-button button-fb" href="#">Фейсбук</a></li>
-					<li><a class="social-button button-vk" href="#">Вконтакте</a></li>
-				</ul>
-			</div>
-			<div class="footer-info">
-				<ul class="footer-info-links">
-					<li><a href="#"><b>Для поставщиков</b></a></li>
-					<li><a href="#">О производстве</a></li>
-					<li><a href="#">Наши документы</a></li>
-					<li><a href="#">Экологические стандарты</a></li>
-				</ul>
-			</div>
-			<div class="footer-copyright">
-				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
-				</a>
-				<p>
-				Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
-				</p>
+			<div class="footer-container">
+				<div class="footer-social">
+					<ul class="footer-social-buttons">
+						<li><a class="social-button button-twitter" href="#">Твиттер</a></li>
+						<li><a class="social-button button-instagram" href="#">Инстаграм</a></li>
+						<li><a class="social-button button-fb" href="#">Фейсбук</a></li>
+						<li><a class="social-button button-vk" href="#">Вконтакте</a></li>
+					</ul>
+				</div>
+				<div class="footer-info">
+					<ul class="footer-info-links">
+						<li><a href="#"><b>Для поставщиков</b></a></li>
+						<li><a href="#">О производстве</a></li>
+						<li><a href="#">Наши документы</a></li>
+						<li><a href="#">Экологические стандарты</a></li>
+					</ul>
+				</div>
+				<div class="footer-copyright">
+					<a href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
+					</a>
+					<p>
+					Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+					</p>
+				</div>
 			</div>
 		</footer>			
 	</body>
