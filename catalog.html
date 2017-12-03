@@ -19,8 +19,8 @@
 						</div>
 						<ul class="site-navigation">
 							<li><a class="site-navigation-link-current" href="catalog.html">Каталог</a></li>
-							<li><a href="delivery-price.html">Доставка и оплата</a></li>
-							<li><a href="info.html">О Компании</a></li>
+							<li><a class="site-navigation-link" href="delivery-price.html">Доставка и оплата</a></li>
+							<li><a class="site-navigation-link" href="info.html">О Компании</a></li>
 						</ul>
 					</nav>
 					<div class="user-navigation-wrapper">
@@ -52,13 +52,13 @@
 							</li>
 							<li class="full-bag">
 								<a class="full-bag-field" href="#">2 товара</a>
-							</li>
+							
 							<form class="order" action="#" method="post">
 								<ul class="order-form">
 									<li class="order-item">
 										<a class="order-item-close" href="#">Закрыть</a>
 										<img src="img/item-1-small.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-										<p>
+										<p class="order-item-name">
 											Пломбир с апельсиновым джемом
 										</p>
 										<p class="order-item-price">
@@ -71,7 +71,7 @@
 									<li class="order-item">
 										<a class="order-item-close" href="#">Закрыть</a>
 										<img src="img/item-3-small.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-										<p>
+										<p class="order-item-name">
 											Клубничный пломбир с присыпкой из белого шоколада
 										</p>
 										<p class="order-item-price">
@@ -83,10 +83,11 @@
 									</li>
 								</ul>
 								<p class="order-item-total">
-									750 руб.
+									Итого: 750 руб.
 								</p>
 								<button class="button order-button" type="submit">Оформить заказ</button>
 							</form>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -115,18 +116,17 @@
 								<option>по цене</option>
 							</select>
 						</fieldset>
-						<fieldset>
-							<legend>Цена: 100 руб. - 500 руб.</legend>
-							<ul class="filter-price-range">
-								<li class="filter-price">	
-									<input class="visually-hidden filter-input filter-input-text" type="text" name="price-group" value="100" id="filter-minimum-price">
-									<label for="filter-minimum-price"></label>
-								</li>
-								<li class="filter-price">
-									<input class="visually-hidden filter-input filter-input-text" type="text" name="price-group" value="500" id="filter-maximum-price">
-									<label for="filter-maximum-price"></label>
-								</li>
-							</ul>
+						<fieldset class="filter-item">
+							<legend>Цена: 100 руб. — 500 руб.</legend>
+							<div class="range-filter">
+								<div class="range-controls">
+									<div class="scale">
+										<div class="bar" style="margin-left: 20px; width: 100px; "></div>
+									</div>
+									<div class="toggle toggle-min"></div>
+									<div class="toggle toggle-max"></div>
+								</div>
+							</div>
 						</fieldset>
 						<fieldset>
 							<legend>Жирность</legend>
@@ -149,7 +149,7 @@
 								</li>
 							</ul>
 						</fieldset>
-						<fieldset>
+						<fieldset class="fillers-group-item">
 							<legend>Наполнители:</legend>
 							<ul class="fillers-group">
 								<li class="filter-option">
@@ -190,8 +190,9 @@
 							</h3>
 							<img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 							<p class="catalog-item-price">
-								310&#8381;/<span class="catalog-item-weight">кг</span>
+								310&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -201,8 +202,9 @@
 							</h3>
 							<img src="img/item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 							<p class="catalog-item-price">
-								380&#8381;/<span class="catalog-item-weight">кг</span>
+								380&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -212,8 +214,9 @@
 							</h3>
 							<img src="img/item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 							<p class="catalog-item-price">
-								355&#8381;/<span class="catalog-item-weight">кг</span>
+								355&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -223,8 +226,9 @@
 							</h3>
 							<img src="img/item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 							<p class="catalog-item-price">
-								415&#8381;/<span class="catalog-item-weight">кг</span>
+								415&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -234,8 +238,9 @@
 							</h3>
 							<img src="img/item-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
 							<p class="catalog-item-price">
-								325&#8381;/<span class="catalog-item-weight">кг</span>
+								325&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -245,8 +250,9 @@
 							</h3>
 							<img src="img/item-6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
 							<p class="catalog-item-price">
-								410&#8381;/<span class="catalog-item-weight">кг</span>
+								410&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -256,8 +262,9 @@
 							</h3>
 							<img src="img/item-7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
 							<p class="catalog-item-price">
-								375&#8381;/<span class="catalog-item-weight">кг</span>
+								375&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -267,8 +274,9 @@
 							</h3>
 							<img src="img/item-8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
 							<p class="catalog-item-price">
-								320&#8381;/<span class="catalog-item-weight">кг</span>
+								320&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -278,8 +286,9 @@
 							</h3>
 							<img src="img/item-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
 							<p class="catalog-item-price">
-								440&#8381;/<span class="catalog-item-weight">кг</span>
+								440&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -289,8 +298,9 @@
 							</h3>
 							<img src="img/item-10.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
 							<p class="catalog-item-price">
-								435&#8381;/<span class="catalog-item-weight">кг</span>
+								435&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -300,8 +310,9 @@
 							</h3>
 							<img src="img/item-11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
 							<p class="catalog-item-price">
-								355&#8381;/<span class="catalog-item-weight">кг</span>
+								355&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
@@ -311,20 +322,21 @@
 							</h3>
 							<img src="img/item-12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
 							<p class="catalog-item-price">
-								420&#8381;/<span class="catalog-item-weight">кг</span>
+								420&#8381;<span class="catalog-item-weight">/кг</span>
 							</p>
+							<button class="button button-item-hover" href="#">Быстрый просмотр</button>
 						</li>
 					</ul>
-					<ul class="paginator-list">
-						<li class="paginator-item paginator-item-prev"><a href="#">&lt</a></li>
-						<li class="paginator-item paginator-item-current">1</li>
-						<li class="paginator-item"><a href="#">2</a></li>
-						<li class="paginator-item"><a href="#">3</a></li>
-						<li class="paginator-item"><a href="#">4</a></li>
-						<li class="paginator-item"><a href="#">5</a></li>
-						<li class="paginator-item paginator-item-next"><a href="#">></a></li>
-					</ul>
 				</section>
+				<ul class="paginator-list">
+					<li class="paginator-item paginator-item-prev"><a href="#">‹</a></li>
+					<li class="paginator-item paginator-item-current">1</li>
+					<li class="paginator-item"><a href="#">2</a></li>
+					<li class="paginator-item"><a href="#">3</a></li>
+					<li class="paginator-item"><a href="#">4</a></li>
+					<li class="paginator-item"><a href="#">5</a></li>
+					<li class="paginator-item paginator-item-next"><a href="#">›</a></li>
+				</ul>
 			</main>
 		</div>
 		<footer class="main-footer">
