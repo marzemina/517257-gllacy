@@ -200,6 +200,7 @@ a {
 
 input[type="text"],
 input[type="password"],
+input[type="search"]
 textarea {
 	font-size: 14px;
 	line-height: 24px;
@@ -218,6 +219,11 @@ textarea:focus {
 	border: 2px solid #8fbdec;
 	font-weight: 700;
 	color: #323232;
+}
+
+::-ms-clear {
+  width : 0;
+  height: 0;
 }
 
 .site-navigation {
@@ -704,10 +710,15 @@ a.order-item-close {
 	height: 15px;
 	border-radius: 50%;
 	background-color: transparent;
-	border: 3px solid #f8f7f4;
+	border: 3px solid #ffffff;
 	opacity: 0.8;
 	left: -30px;
 	cursor: pointer;	
+}
+
+.filter-option input[type="radio"] + label:hover::before {
+	border: 3px solid #ffffff;
+	opacity: 1.0;
 }
 
 .filter-option input[type="checkbox"] + label {
@@ -725,10 +736,15 @@ a.order-item-close {
 	height: 17px;
 	border-radius: 20%;
 	background-color: transparent;
-	border: 2px solid #f8f7f4;
+	border: 2px solid #ffffff;
 	opacity: 0.8;
 	left: -29px;
 	cursor: pointer;
+}
+
+.filter-option input[type="checkbox"] + label:hover::before {
+	border: 2px solid #ffffff;
+	opacity: 1.0;
 }
 
 .filter-option input[type="checkbox"]:checked + label::before {
@@ -808,13 +824,22 @@ a.order-item-close {
 .filter-sorting {
 	width: 194px;
 	height: 37px;
-	color: white;
+	color: #ffffff;
+	border-radius: 18px;
+	background-image: url("../img/icon-down-dir.png");
+	background-repeat: no-repeat;
+	background-position: 93% 54%;
 	background-color: #9db1a5;
+	-webkit-appearance: none;	
 }
+
 
 .filter-sorting:hover {
 	color: #323232;
-	background-color: #ffffff;
+	background-color: #9db1a5;
+	background-image: url("../img/icon-down-dir-black.png");
+	background-repeat: no-repeat;
+	background-position: 93% 54%;
 }
 
 .filter-button {
