@@ -6,9 +6,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-		<script src="js/mapbasics.js"></script>
-		<script src="js/popupscript.js"></script>
 	</head>
 	<body>
 		<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -224,7 +221,7 @@
 						<b class="location-telephone">8 812 450-25-25</b><br>
 							(с 10 до 20 ежедневно)
 						</p>
-						<a class="button button-feedback-form" onclick="showit()" href="#cfb" id="cfb">Форма обратной связи</a>
+						<a class="button button-feedback-form" id="cfb">Форма обратной связи</a>
 					</div>
 				</div>
 			</section>
@@ -259,7 +256,7 @@
 			</footer>
 			<div class="feedback-form-overlay" id="cfoverlay"></div>
 			<div class="popup" id="cfpopup">
-				<button class="feedback-form-close" onclick="closeit()" type="button"></button>
+				<button class="feedback-form-close" id="cfb2" type="button">Закрыть</button>
 				<h2>Мы обязательно вам ответим!</h2>
 				<form action="#" method="post">
 					<p>
@@ -278,5 +275,7 @@
 				</form>
 			</div>
 		</div>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script src="js/basics.js"></script>
 	</body>
 </html>

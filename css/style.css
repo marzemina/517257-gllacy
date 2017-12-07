@@ -219,6 +219,7 @@ textarea:focus {
 	border: 2px solid #8fbdec;
 	font-weight: 700;
 	color: #323232;
+	border-radius: 5px;
 }
 
 ::-ms-clear {
@@ -268,7 +269,7 @@ textarea:focus {
 	padding: 0px;
 }
 
-.site-navigation-sub li a {
+.site-navigation-sub li:not(:first-child) a {
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 400;
@@ -277,26 +278,38 @@ textarea:focus {
 	margin: 0;
 	padding-bottom: 8px;
 	padding-top: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .site-navigation-sub li:first-child a {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #323232;
+	text-decoration: none;
+	margin: 0;
+	padding-bottom: 8px;
+	padding-top: 8px;
 	margin-top: 3px;
 	margin-bottom: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
 	font-weight: 700;
-	border-bottom: 1px solid #d1d0ce;
+	border-bottom: 1px solid #d1d0ce;	
 }
 
 .site-navigation-sub li:last-child a {
 	margin-bottom: 4px;
 }
 
-.site-navigation-sub li > a:hover,
-.site-navigation-sub li > a:focus {
+.site-navigation-sub li:not(:first-child) > a:hover,
+.site-navigation-sub li:not(:first-child) > a:focus {
 	color: #323232;
 	background-color: #fbded7;
 }
 
-.site-navigation-sub li > a:active {
+.site-navigation-sub li:not(:first-child) > a:active {
 	color: #323232;
 	background-color: #f6b5a5;
 }
@@ -404,7 +417,7 @@ li:hover .site-navigation-sub {
 	padding-bottom: 10px;
 }
 
-.site-navigation a:active {
+.site-navigation a:active:not(:first-child) {
 	color: #323232;
 	background: #eaeaea;
 	box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
@@ -432,11 +445,19 @@ li:hover .site-navigation-sub {
 .search-form input {
 	display: block;
 	padding-left: 14px;
+	padding-right: 14px;
 	border-radius: 5px;
 	width: 311px;
 	height: 44px;
 	box-sizing: border-box;
 	margin-top: 20px;
+}
+
+.search-form input:hover,
+.search-form input:focus {
+	padding-left: 13px;
+	padding-right: 13px;
+	line-height: 23px;
 }
 
 .login-form {
@@ -473,6 +494,13 @@ li:hover .site-navigation-sub {
 	margin-top: 20px;
 }
 
+.login-form input:hover,
+.login-form input:focus {
+	padding-left: 13px;
+	padding-right: 13px;
+	line-height: 23px;
+}
+
 .button-login-form {
 	width: 100px;
 	margin-top: -55px;
@@ -493,8 +521,7 @@ li:hover .site-navigation-sub {
 	line-height: 24px;
 	color: #323232;
 	background-color: #f8f7f4;
-	margin-bottom: -8px;
-	
+	margin-bottom: -8px;	
 }
 
 .restore-registration-links a span {
@@ -736,25 +763,24 @@ select::-ms-expand {
 .filter-option input[type="checkbox"] + label::before {
 	content: "";
 	position: absolute;
-	width: 17px;
-	height: 17px;
-	border-radius: 20%;
+	width: 23px;
+	height: 23px;
 	background-color: transparent;
-	border: 2px solid #ffffff;
+	background-image: url("../img/icon_checkbox-off.svg");
 	opacity: 0.8;
 	left: -29px;
 	cursor: pointer;
 }
 
 .filter-option input[type="checkbox"] + label:hover::before {
-	border: 2px solid #ffffff;
 	opacity: 1.0;
 }
 
 .filter-option input[type="checkbox"]:checked + label::before {
 	background-image: url("../img/icon_checkbox-on.svg");
 	background-repeat: no-repeat;
-	background-position: -2px;
+	width: 27px;
+	height: 23px;	
 }
 
 .filter-option input[type="radio"]:checked + label::before {
@@ -1327,6 +1353,7 @@ select::-ms-expand {
 	padding: 9px;
 	text-align: center;
 	box-sizing: border-box;	
+	cursor: pointer;
 }
 
 .feedback-form-overlay-show {
@@ -1340,7 +1367,7 @@ select::-ms-expand {
 	display: block;
 }
 
-.popup{
+.popup {
 	color: #323232;
 	background-color: #f8f7f4;
 	width: 478px;
@@ -1380,6 +1407,18 @@ select::-ms-expand {
 	padding-left: 14px;
 	border-radius: 5px;
 	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.feedback-form input:hover,
+.feedback-form input:focus,
+.feedback-form input:active {
+	line-height: 23px;
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 0px;
+	border-radius: 5px;
+	box-sizing: border-box;
 }
 
 .feedback-form textarea {
@@ -1390,8 +1429,18 @@ select::-ms-expand {
 	border-radius: 5px;
 	padding-top: 5px;
 	padding-left: 14px;
-	margin-bottom: 25px;
-	margin: 0px;	
+	box-sizing: border-box;
+}
+
+.feedback-form textarea:hover,
+.feedback-form textarea:focus,
+ .feedback-form textarea:active {
+	line-height: 23px;
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 4px;
+	border-radius: 5px;
+	box-sizing: border-box;
 }
 
 .feedback-form-button {
@@ -1404,6 +1453,7 @@ select::-ms-expand {
 	position: absolute;
 	width: 18px;
 	height: 17px;
+	font-size: 0px;
 	background: url("../img/icon_cross-big.svg") no-repeat;
 	border-style: none;
 	background-size: cover;
@@ -1447,15 +1497,15 @@ select::-ms-expand {
 }
 
 .paginator-item-next a:hover ,
-.paginator-item-next a:focus {
+.paginator-item-next a:focus,
+.paginator-item-next a:active {
 	color: #ffffff;
 	background-color: transparent;
 }
 
-.paginator-item:active, 
+.paginator-item a:active, 
 .paginator-item-current,
-.paginator-item-current:hover,
-.paginator-item-current:focus {
+.paginator-item-current:hover {
 	color: #323232; 
 	background-color: #ffffff;
 }
@@ -1470,8 +1520,12 @@ select::-ms-expand {
 	margin-left: 0;
 }
 
-.paginator-item-next a {
+.paginator-item-next a,
+.paginator-item-next a:hover,
+.paginator-item-next a:active {
 	font-size: 22px;
+	color: #ffffff;
+	background-color: transparent;
 }
 
 .main-footer {
@@ -1595,7 +1649,7 @@ select::-ms-expand {
 }
 
 @keyframes popup-animation {
-  0% {transform: translate(-50%, -2000px);}
-  1% {transform: translate(-50%, -190%);}
-  100% {transform: translate(-50%, -50%);}
+	0% {transform: translate(-50%, -2000px);}
+	1% {transform: translate(-50%, -190%);}
+	100% {transform: translate(-50%, -50%);}
 }
