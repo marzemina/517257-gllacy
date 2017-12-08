@@ -34,8 +34,8 @@ addEvent(
 	document.getElementById('cfb'),
 	'click',
 	function () { 
-	document.getElementById("cfpopup").classList.add("feedback-form");
-	document.getElementById("cfoverlay").classList.add("feedback-form-overlay-show");
+		document.getElementById('cfpopup').classList.add('feedback-form');
+		document.getElementById('cfoverlay').classList.add('feedback-form-overlay-show');
 	}
 );
 
@@ -43,8 +43,8 @@ addEvent(
 	document.getElementById('cfb2'),
 	'click',
 	function () { 
-	document.getElementById("cfpopup").classList.remove("feedback-form");
-	document.getElementById("cfoverlay").classList.remove("feedback-form-overlay-show");
+		document.getElementById('cfpopup').classList.remove('feedback-form');
+		document.getElementById('cfoverlay').classList.remove('feedback-form-overlay-show');
 	}
 );
 
@@ -52,7 +52,7 @@ addEvent(
 	document.getElementById('cfoverlay'),
 	'click',
 	function () { 
-	document.getElementById("cfpopup").classList.remove("feedback-form");
-	document.getElementById("cfoverlay").classList.remove("feedback-form-overlay-show");
+		document.getElementById('cfpopup').classList.remove('feedback-form');
+		document.getElementById('cfoverlay').classList.remove('feedback-form-overlay-show');
 	}
 );
