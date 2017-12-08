@@ -1297,7 +1297,7 @@ select::-ms-expand {
 	height: 430px;
 }
 
-#map {
+.map-big {
 	width: 100%;
 	height: 430px;
 	margin-top: -429px;
