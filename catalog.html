@@ -5,7 +5,7 @@
 		<title>HTML Academy: Глейси</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
 	</head>
 	<body class="inner-page">
 		<div class="main-container">
@@ -18,9 +18,18 @@
 							</a>
 						</div>
 						<ul class="site-navigation">
-							<li><a class="site-navigation-link-current" href="catalog.html">Каталог</a></li>
-							<li><a class="site-navigation-link" href="delivery-price.html">Доставка и оплата</a></li>
-							<li><a class="site-navigation-link" href="info.html">О Компании</a></li>
+							<li>
+								<a class="site-navigation-link site-navigation-link-current" href="catalog.html">Каталог</a>
+								<ul class="site-navigation-sub">
+									<li><a class="site-navigation-sub_novelty-link" href="#">Новинки</a></li>
+									<li><a class="active" href="catalog.html">Сливочное</a></li>
+									<li><a href="#">Щербеты</a></li>
+									<li><a href="#">Фруктовый лёд</a></li>
+									<li><a href="#">Мелорин</a></li>
+								</ul>
+							</li>
+							<li><a class="site-navigation-link" href="delivery-price.html"><span>Доставка и оплата</span></a></li>
+							<li><a class="site-navigation-link" href="info.html"><span>О Компании</span></a></li>
 						</ul>
 					</nav>
 					<div class="user-navigation-wrapper">
@@ -57,7 +66,7 @@
 								<ul class="order-form">
 									<li class="order-item">
 										<a class="order-item-close" href="#">Закрыть</a>
-										<img src="img/item-1-small.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+										<img src="img/item-1-small.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
 										<p class="order-item-name">
 											Пломбир с апельсиновым джемом
 										</p>
@@ -70,7 +79,7 @@
 									</li>
 									<li class="order-item">
 										<a class="order-item-close" href="#">Закрыть</a>
-										<img src="img/item-3-small.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+										<img src="img/item-3-small.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
 										<p class="order-item-name">
 											Клубничный пломбир с присыпкой из белого шоколада
 										</p>
@@ -185,7 +194,7 @@
 						<li class="catalog-item">
 							<h3 class="catalog-item-description">
 								<a href="catalog-item.html">
-									Сливочное с апельсиновым джемом и цитрусовой стружкой
+									Сливочное с апельсиновым джемом и цитрусовой стружкой 
 								</a>
 							</h3>
 							<img src="img/item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
