@@ -35,7 +35,7 @@
 					<div class="user-navigation-wrapper">
 						<ul class="user-navigation">
 							<li class="search">
-								<a class="search-field-link" href="#"></a>
+								<a class="search-field-link" href="#">Поиск</a>
 								<form class="search-form">
 									<input id="search" type="text" name="search" placeholder="Что ищем?">
 									<label class="search-input-label" for="search">Что ищем?</label>
@@ -105,8 +105,8 @@
 					<p class="header-contacts-tel">8 812 450-25-25</p>
 				</div>
 				<ul class="breadcrumbs">
-					<li><a href="index.html">Главная</a></li>
-					<li><a href="catalog.html">Каталог</a></li>
+					<li><a class="breadcrumbs-item" href="index.html">Главная</a></li>
+					<li><a class="breadcrumbs-item" href="catalog.html">Каталог</a></li>
 					<li><a class="breadcrumbs-current">Сливочное</a></li>
 				</ul>
 			</header>
@@ -119,7 +119,7 @@
 					<form class="filter" action="https://echo.htmlacademy.ru" method="get">
 						<fieldset>
 							<legend class="sorting">Сортировка:</legend>
-							<select class="filter-sorting" id="filter-sorting" name="sorting">
+							<select class="filter-sorting" id="filter-sorting" name="sorting" tabindex="0">
 								<option value="popular">по популярности</option>
 								<option value="fatness">по жирности</option>
 								<option value="price">по цене</option>
@@ -127,7 +127,7 @@
 						</fieldset>
 						<fieldset class="filter-item">
 							<legend>Цена: 100 руб. — 500 руб.</legend>
-							<div class="range-filter">
+							<div class="range-filter" tabindex="0">
 								<div class="range-controls">
 									<div class="scale">
 										<div class="bar" style="margin-left: 20px; width: 100px; "></div>
@@ -141,19 +141,19 @@
 							<legend>Жирность</legend>
 							<ul class="fat-group">
 								<li class="filter-option">
-									<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-zero">
+									<input class="visually-hidden-fat" type="radio" name="fat-group" id="filter-zero">
 									<label for="filter-zero">0%</label>
 								</li>
 								<li class="filter-option">
-									<input class="visually-hidden filter-input filter-input-radio" type="radio" checked="" name="fat-group" id="filter-up-ten">
+									<input class="visually-hidden-fat" type="radio" checked="" name="fat-group" id="filter-up-ten">
 									<label for="filter-up-ten">до 10%</label>
 								</li>
 								<li class="filter-option">
-									<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-up-thirty">
+									<input class="visually-hidden-fat" type="radio" name="fat-group" id="filter-up-thirty">
 									<label for="filter-up-thirty">до 30%</label>
 								</li>
 								<li class="filter-option">
-									<input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat-group" id="filter-above-thirty">
+									<input class="visually-hidden-fat" type="radio" name="fat-group" id="filter-above-thirty">
 									<label for="filter-above-thirty">выше 30%</label>
 								</li>
 							</ul>
@@ -163,23 +163,23 @@
 							<ul class="fillers-group">
 								<li class="filter-option">
 									<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" checked="" id="filter-chocolate">
-									<label for="filter-chocolate">шоколадные</label>
+									<label for="filter-chocolate" tabindex="0">шоколадные</label>
 								</li>
 								<li class="filter-option">
 									<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-powders" checked="" id="filter-sugar-powders">
-									<label for="filter-sugar-powders">сахарные присыпки</label>
+									<label for="filter-sugar-powders" tabindex="0">сахарные присыпки</label>
 								</li>
 								<li class="filter-option">
 									<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="filter-fruit">
-									<label for="filter-fruit">фрукты</label>
+									<label for="filter-fruit" tabindex="0">фрукты</label>
 								</li>
 								<li class="filter-option">
 									<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="syrups" id="filter-syrups">
-									<label for="filter-syrups">сиропы</label>
+									<label for="filter-syrups" tabindex="0">сиропы</label>
 								</li>
 								<li class="filter-option">
 									<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jams" id="filter-jams">
-									<label for="filter-jams">джемы</label>
+									<label for="filter-jams" tabindex="0">джемы</label>
 								</li>
 							</ul>
 						</fieldset>
